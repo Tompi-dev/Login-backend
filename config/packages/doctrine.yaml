@@ -1,6 +1,6 @@
 doctrine:
    
-     dbal:
+    dbal:
         url: '%env(resolve:DATABASE_URL)%'
         server_version: '15'
 
