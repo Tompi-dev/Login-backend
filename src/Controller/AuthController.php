@@ -29,7 +29,7 @@ class AuthController extends AbstractController
         }
 
         if (strlen($password) < 6) {
-            return new JsonResponse(['error' => 'Password must be at least 6 characters'], 400);
+            return new JsonResponse(['error' => 'Password must be at least 6 characters'], 401);
         }
 
 
