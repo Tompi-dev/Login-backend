@@ -79,3 +79,4 @@ php bin/console make:listener BlockingUserCheckListener
 php bin/console debug:event-dispatcher App\Event\BlockingUserCheckEvent
 
 composer require nelmio/cors-bundle
+php bin/console cache:clear
