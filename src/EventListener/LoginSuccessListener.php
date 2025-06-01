@@ -20,7 +20,8 @@ class LoginSuccessListener
         $user = $event->getUser();
 
         if ($user instanceof User) {
-            $user->setLastLogin(new \DateTime());
+           
+            $user->setLastLogin((new \DateTime())->modify('+6 hours'));
             $this->em->flush();
 
             // Добавление данных пользователя в ответ
