@@ -30,7 +30,9 @@ class LoginSuccessListener
                     'email' => $user->getEmail(),
                     'isBlocked' => $user->isBlocked(),
                     'name' => $user->getName(),
-                    'last_login' => $user -> getLastLogin(),
+                   
+                    'last_login' => $user->getLastLogin()?->format('Y-m-d H:i:s'),
+
                 ]
             ]));
         }
