@@ -21,10 +21,10 @@ class LoginSuccessListener
 
         if ($user instanceof User) {
            
-            $user->setLastLogin((new \DateTime())->modify('+5 hours'));
+            $user->setLastLogin((new \DateTime())->modify('+4 hours'));
             $this->em->flush();
 
-            // Добавление данных пользователя в ответ
+            
             $event->setData(array_merge($event->getData(), [
                 'user' => [
                     'id' => $user->getId(),
